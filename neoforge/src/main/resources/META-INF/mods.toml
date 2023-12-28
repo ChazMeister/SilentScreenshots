@@ -1,0 +1,26 @@
+modLoader = "javafml"
+loaderVersion = "${neoforge_loader_version_range}"
+issueTrackerURL = "https://github.com/Crendgrim/SilentScreenshots/issues"
+license = "LGPL-3.0"
+
+[[mods]]
+modId = "silentscreenshots"
+version = "${mod_version}"
+displayName = "Silent Screenshots"
+authors = "Crendgrim"
+description = '''
+Removes the chat message after taking a screenshot
+'''
+logoFile = "silentscreenshots.png"
+displayTest = "IGNORE_ALL_VERSION"
+
+[[mixins]]
+config = "silentscreenshots.mixins.json"
+
+[[dependencies.silentscreenshots]]
+modId = "minecraft"
+type = "required"
+mandatory = true
+versionRange = "${minecraft_version_range_forge}"
+ordering = "NONE"
+side = "BOTH"

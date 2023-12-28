@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "silentscreenshots",
+  "version": "${mod_version}",
+
+  "name": "Silent Screenshots",
+  "description": "Removes the chat message after taking a screenshot",
+  "authors": [
+    "Crendgrim"
+  ],
+  "contact": {
+  },
+
+  "license": "LGPL-3.0",
+  "icon": "silentscreenshots.png",
+
+  "environment": "client",
+  "entrypoints": {
+  },
+  "mixins": [
+    "silentscreenshots.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": "${fabric_loader_version_range}",
+    "minecraft": "${minecraft_version_range_fabric}"
+  }
+}
