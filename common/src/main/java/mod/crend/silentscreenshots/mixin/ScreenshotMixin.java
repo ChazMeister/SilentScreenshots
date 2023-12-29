@@ -16,4 +16,16 @@ public class ScreenshotMixin {
 	)
 	private static void silentScreenshots$successMessage(Consumer<Component> instance, Object object) {
 	}
+
+	/*
+	 * (Neo)Forge patch the Screenshot class to introduce a ScreenshotEvent. We cannot use that as it still outputs
+	 * a chat message on canceling. The patch also makes the Mixin above fail, so we simply try both variants with
+	 * `defaultRequire=0` in the mixin config.
+	 */
+	@Redirect(
+			method = "lambda$_grab$2",
+			at = @At(value = "INVOKE", target = "Ljava/util/function/Consumer;accept(Ljava/lang/Object;)V", ordinal = 1)
+	)
+	private static void silentScreenshots$successMessageForge(Consumer<Component> instance, Object object) {
+	}
 }
