@@ -1,4 +1,4 @@
-package mod.crend.silentscreenshots;
+package mod.crend.silentscreenshots.common;
 
 import org.objectweb.asm.tree.ClassNode;
 import org.spongepowered.asm.mixin.extensibility.IMixinConfigPlugin;

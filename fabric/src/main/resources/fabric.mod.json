@@ -16,6 +16,9 @@
 
   "environment": "client",
   "entrypoints": {
+    "client": [
+      "mod.crend.silentscreenshots.SilentScreenshotsFabric"
+    ]
   },
   "mixins": [
     "silentscreenshots.mixins.json"

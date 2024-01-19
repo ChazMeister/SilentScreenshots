@@ -1,5 +1,6 @@
 package mod.crend.silentscreenshots.mixin;
 
+import mod.crend.silentscreenshots.SilentScreenshots;
 import net.minecraft.client.Screenshot;
 import net.minecraft.network.chat.Component;
 import org.spongepowered.asm.mixin.Mixin;
@@ -15,6 +16,7 @@ public class ScreenshotMixin {
 			at = @At(value = "INVOKE", target = "Ljava/util/function/Consumer;accept(Ljava/lang/Object;)V", ordinal = 0)
 	)
 	private static void silentScreenshots$successMessage(Consumer<Component> instance, Object object) {
+		SilentScreenshots.trigger(instance, (Component) object);
 	}
 
 	/*
@@ -27,5 +29,6 @@ public class ScreenshotMixin {
 			at = @At(value = "INVOKE", target = "Ljava/util/function/Consumer;accept(Ljava/lang/Object;)V", ordinal = 1)
 	)
 	private static void silentScreenshots$successMessageForge(Consumer<Component> instance, Object object) {
+		SilentScreenshots.trigger(instance, (Component) object);
 	}
 }

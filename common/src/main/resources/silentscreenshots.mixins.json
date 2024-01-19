@@ -9,5 +9,5 @@
   "injectors": {
     "defaultRequire": 0
   },
-  "plugin": "mod.crend.silentscreenshots.SilentScreenshotsMixinPlugin"
+  "plugin": "mod.crend.silentscreenshots.common.SilentScreenshotsMixinPlugin"
 }
